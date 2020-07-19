@@ -1,6 +1,7 @@
 set_env.sh
 
 config.env
+**/secret.yaml
 
 .idea
 .idea/*

@@ -5,7 +5,7 @@ metadata:
     service: udagram-reverse-proxy
   name: udagram-reverse-proxy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       service: udagram-reverse-proxy
