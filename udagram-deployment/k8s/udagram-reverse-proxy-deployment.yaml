@@ -15,7 +15,7 @@ spec:
         service: udagram-reverse-proxy
     spec:
       containers:
-      - image: komni/udacity-reverse-proxy
+      - image: komni/udagram-reverse-proxy
         name: udagram-reverse-proxy
         imagePullPolicy: Always          
         resources:
@@ -28,5 +28,3 @@ spec:
         ports:
         - containerPort: 8080
       restartPolicy: Always
-
-

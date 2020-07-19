@@ -1,5 +1,7 @@
 set_env.sh
 
+config.env
+
 .idea
 .idea/*
 

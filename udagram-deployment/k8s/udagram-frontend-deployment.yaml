@@ -16,7 +16,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: komni/udacity-frontend
+      - image: komni/udagram-frontend
         name: udagram-frontend
         imagePullPolicy: Always          
         ports:

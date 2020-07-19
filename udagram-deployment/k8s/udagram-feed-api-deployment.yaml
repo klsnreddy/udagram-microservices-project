@@ -15,7 +15,7 @@ spec:
         service: udagram-feed-api
     spec:
       containers:
-      - image: komni/udacity-restapi-feed
+      - image: komni/udagram-feed-api
         name: udagram-feed-api
         imagePullPolicy: Always  
         resources:

@@ -15,7 +15,7 @@ spec:
         service: udagram-user-api
     spec:
       containers:
-      - image: komni/udacity-restapi-user
+      - image: komni/udagram-user-api
         name: udagram-user-api
         imagePullPolicy: Always  
         resources:
