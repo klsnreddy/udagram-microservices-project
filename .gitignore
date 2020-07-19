@@ -1,5 +1,6 @@
 set_env.sh
 
+secret.env
 config.env
 **/secret.yaml
 

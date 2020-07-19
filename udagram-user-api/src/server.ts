@@ -1,4 +1,4 @@
-import cors from 'cors';
+//import cors from 'cors';
 import express from 'express';
 import {sequelize} from './sequelize';
 
@@ -6,11 +6,11 @@ import {IndexRouter} from './controllers/v0/index.router';
 
 import bodyParser from 'body-parser';
 import {config} from './config/config';
-import {V0_USER_MODELS} from './controllers/v0/model.index';
+import {V0MODELS} from './controllers/v0/model.index';
 
 
 (async () => {
-  await sequelize.addModels(V0_USER_MODELS);
+  await sequelize.addModels(V0MODELS);
   await sequelize.sync();
 
   const app = express();
@@ -18,15 +18,22 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 
   app.use(bodyParser.json());
 
-  app.use(cors({
-    allowedHeaders: [
-      'Origin', 'X-Requested-With',
-      'Content-Type', 'Accept',
-      'X-Access-Token', 'Authorization',
-    ],
-    methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-    origin: config.url,
-  }));
+
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", config.url);
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-Access-Token");
+    next();
+  });
+
+  // app.use(cors({
+  //   allowedHeaders: [
+  //     'Origin', 'X-Requested-With',
+  //     'Content-Type', 'Accept',
+  //     'X-Access-Token', 'Authorization',
+  //   ],
+  //   methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+  //   origin: config.url,
+  // }));
 
   app.use('/api/v0/', IndexRouter);
 
