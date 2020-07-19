@@ -1,0 +1,11 @@
+set_env.sh
+
+.idea
+.idea/*
+
+.git
+.git/*
+
+*/node_modules/
+*/node_modules/*
+**/node_modules/*
