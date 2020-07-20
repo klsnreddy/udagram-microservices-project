@@ -5,10 +5,10 @@ metadata:
     service: udagram-reverse-proxy
   name: udagram-reverse-proxy
 spec:
+  type: LoadBalancer
   ports:
   - name: "8080"
     port: 8080
     targetPort: 8080
   selector:
     service: udagram-reverse-proxy
-#  type: LoadBalancer    
