@@ -1,17 +1,17 @@
 version: '3'
 services:
-#  udagram-reverse-proxy:
-#    build:
-#      context: ../../udagram-reverse-proxy
-#    image: komni/udagram-reverse-proxy
-#  udagram-user-api:
-#    build:
-#      context: ../../udagram-user-api
-#    image: komni/udagram-user-api
-#  udagram-feed-api:
-#    build:
-#      context: ../../udagram-feed-api
-#    image: komni/udagram-feed-api
+  udagram-reverse-proxy:
+    build:
+      context: ../../udagram-reverse-proxy
+    image: komni/udagram-reverse-proxy
+  udagram-user-api:
+    build:
+      context: ../../udagram-user-api
+    image: komni/udagram-user-api
+  udagram-feed-api:
+    build:
+      context: ../../udagram-feed-api
+    image: komni/udagram-feed-api
   udagram-frontend:
     build:
       context: ../../udagram-frontend
