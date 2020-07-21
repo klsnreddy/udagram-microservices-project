@@ -22,6 +22,8 @@ import {V0MODELS} from './controllers/v0/model.index';
   app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", config.url);
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-Access-Token");
+    console.log("req: " + req);
+    console.log("headers: " + JSON.stringify(req.headers));
     next();
   });
 

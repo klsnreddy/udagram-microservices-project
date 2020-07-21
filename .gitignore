@@ -1,9 +1,12 @@
+.DS_Store
+
 set_env.sh
 
 history.txt
 
 secret.env
 config.env
+**/delete.sh
 **/deploy.sh
 **/credentials
 **/secret.yaml
