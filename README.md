@@ -11,3 +11,6 @@
 - Create Required resources (S3 Bucket, RDS instance, IAM Roles, EKS Cluster and Node Groups).
 - Deploy the Kubernetes pods/servies.
 - Create LoadBalancer for Reverse Proxy.
+
+### Replication and Autoscaling
+- Setup Replication and Auto Scaling for one service, because of resouce constraints.
