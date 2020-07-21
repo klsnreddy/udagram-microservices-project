@@ -62,6 +62,7 @@ router.get('/signed-url/:fileName',
     async (req: Request, res: Response) => {
     let { fileName } = req.params;
     const url = AWS.getPutSignedUrl(fileName);
+    console.log('URL: ' + url)
     res.status(201).send({url: url});
 });
 

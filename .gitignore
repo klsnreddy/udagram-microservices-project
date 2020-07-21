@@ -1,8 +1,13 @@
 set_env.sh
 
+history.txt
+
 secret.env
 config.env
+**/deploy.sh
+**/credentials
 **/secret.yaml
+**/aws-secret.yaml
 
 .idea
 .idea/*
